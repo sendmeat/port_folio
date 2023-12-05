@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@700&display=swap");
+/* root variables */
+:root {
+  --text-font: "Hind", sans-serif;
+  --title-font: "Montserrat", sans-serif;
+  --primary-colour: #212121;
+  --secondary-colour: #14ffec;
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 8%);
+  --dark-fade: rgba(0, 0, 0, 0.35);
+  --gray: hsl(0, 0%, 44%);
+  --light-gray: hsl(0, 0%, 63%);
+  --faded-gray: hsl(0, 0%, 88%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--primary-colour);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+li {
+  color: var(--secondary-colour);
+  font-family: var(--text-font);
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 25px;
+}
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.navbar {
+  margin: 5vh 14vh;
+  display: flex;
+  justify-content: center;
+}
+
+div.navbar span {
+  padding: 0 10vw;
+  font-size: 20px;
+}
+
+.introduction {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+section.portfolio {
+  margin: 5vh 14vw;
+}
+
+.projects {
+  display: flex;
+  /* wrap when they reach the end of the container */
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: center;
+  /* aligns items along vertical axis  */
+  align-items: center;
+  padding: 10vh;
+}
+
+.experience {
+  margin-bottom: 10vh;
+}
+
+.experience__text {
+  max-width: 100%;
+  margin: 2vh 5vw 5vh 0;
+  word-wrap: break-word;
+  justify-content: left;
+}
+
+.titles {
+  text-transform: uppercase;
+  font-size: rem(14);
+  font-family: var(--title-font);
+}
+
+.card {
+  --blur: 16px;
+  --size: clamp(300px, 50vmin, 600px);
+  width: var(--size);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+  color: #000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__text {
+  color: #000;
+}
+.card__footer {
+  padding: 0 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  display: grid;
+  gap: 0.5ch;
+  background: hsl(0 0% 100% / 0.5);
+  backdrop-filter: blur(var(--blur));
+  height: 30%;
+  align-content: center;
+}
+
+.footer {
+  margin: 15vh 14vw 5vh 14vw;
+}
+
+.footer__redes-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 45px auto;
+}
+
+.footer__redes-wrapper li {
+  display: inline-block;
+}
+
+.footer__redes-wrapper li:hover {
+  color: var(--gray);
+}
+
+.footer__link {
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: rem(14);
+}
+
+.fab {
+  margin-right: 8px;
+}
+
+.footer__text {
+  color: var(--light-gray);
+  text-align: center;
+}
+
+.separate {
+  background-color: var(--faded-gray);
+  height: 2px;
+  max-width: 30px;
+  margin: 15px auto 20px;
+}
